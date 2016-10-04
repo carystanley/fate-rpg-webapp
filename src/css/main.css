@@ -36,6 +36,10 @@ body {
   text-align: center;
 }
 
+.roll-total {
+  text-align: center;
+}
+
 .dice {
   background-color: #356aa0;
   border-radius: 20%;
