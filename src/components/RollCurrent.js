@@ -20,8 +20,11 @@ const RollCurrent = React.createClass({
   },
 
   handleMouseUp: function () {
-    this.setState({shake: false});
-    this.props.onRoll();
+    let {shake} = this.state;
+    if (shake) {
+      this.setState({shake: false});
+      this.props.onRoll();
+    }
   },
 
   getInitialState: () => ({
