@@ -2,11 +2,12 @@
   "name": "fate-rpg-webapp",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://carystanley.github.io/fate-rpg-webapp/", 
+  "homepage": "https://carystanley.github.io/fate-rpg-webapp/",
   "devDependencies": {
     "react-scripts": "^0.6.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
@@ -21,4 +22,3 @@
     "extends": "./node_modules/react-scripts/config/eslint.js"
   }
 }
-

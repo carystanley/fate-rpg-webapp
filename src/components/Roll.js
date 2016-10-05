@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import Dice from './Dice'
 
 const ladder = {
   '-2': 'Terrible',
@@ -22,7 +23,7 @@ const Roll = React.createClass({
     let {values, total} = this.props;
     return (
       <li ref={(ref) => this._li = ref}>
-        <div className="roll">{values.map(value => <div className={'dice value' + value}><div className="vert" /><div className="horz" /></div>)}</div>
+        <div className="roll">{values.map(value => <Dice value={value} />)}</div>
         <div className="roll-total">{format(total)} {superlative(total)}</div>
       </li>
     );
