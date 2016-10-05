@@ -23,7 +23,7 @@ const RollHistoryItem = React.createClass({
     let {values, total} = this.props;
     return (
       <li ref={(ref) => this._li = ref}>
-        <div className="roll">{values.map(value => <Dice value={value} />)}</div>
+        <div className="roll">{values.map(value => <Dice size="size-medium" value={value} />)}</div>
         <div className="roll-total">{format(total)} {superlative(total)}</div>
       </li>
     );
