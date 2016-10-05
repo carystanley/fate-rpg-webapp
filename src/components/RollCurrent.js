@@ -15,8 +15,8 @@ const RollCurrent = React.createClass({
   },
 
   propTypes: {
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired
+    roll: PropTypes.object.isRequired,
+    onRoll: PropTypes.func.isRequired
   }
 });
 
