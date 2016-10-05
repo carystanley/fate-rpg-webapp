@@ -18,7 +18,7 @@ const ladder = {
 const superlative = (value) => ladder['' + Math.min(Math.max(value, -2), 8)];
 const format = (value) => value > 0 ? '+'+value : ''+value;
 
-const Roll = React.createClass({
+const RollHistoryItem = React.createClass({
   render: function() {
     let {values, total} = this.props;
     return (
@@ -39,4 +39,4 @@ const Roll = React.createClass({
   }
 });
 
-export default Roll
+export default RollHistoryItem
