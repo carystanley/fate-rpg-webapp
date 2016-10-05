@@ -3,16 +3,30 @@ import Dice from './Dice'
 
 const RollCurrent = React.createClass({
   render: function() {
-    let {roll, onRoll} = this.props;
-    let values = roll ? roll.values : [0, 0, 0, 0];
+    let {roll} = this.props;
+    let {shake} = this.state;
+    let values = roll && !shake ? roll.values : [0, 0, 0, 0];
     return (
-      <div onClick={() => onRoll()} className="mid-center">
+      <div onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} className="mid-center">
         <div className="square">
-          {values.map(value => <div className="square-pad"><Dice size="size-100" value={value} /></div>)}
+          {values.map(value => <div className="square-pad"><Dice size="size-100" value={value} shake={shake} /></div>)}
         </div>
       </div>
     );
   },
+
+  handleMouseDown: function () {
+    this.setState({shake: true});
+  },
+
+  handleMouseUp: function () {
+    this.setState({shake: false});
+    this.props.onRoll();
+  },
+
+  getInitialState: () => ({
+    shake: false
+  }),
 
   propTypes: {
     roll: PropTypes.object.isRequired,
