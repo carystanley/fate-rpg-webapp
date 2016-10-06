@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import RollHistoryItem from './RollHistoryItem'
 
 const RollHistory = ({ rollHistory }) => (
-  <ul className="list-container">
+  <ul className="list-container bgc-container">
     {rollHistory.map((roll, idx) =>
       <RollHistoryItem
         key={idx}
