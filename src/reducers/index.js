@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import rollHistory from './rollHistory'
+import history from './history'
+import app from './app'
 
 const reducers = combineReducers({
-  rollHistory
+  history,
+  app
 })
 
 export default reducers

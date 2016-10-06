@@ -17,7 +17,7 @@ const roll = (state, action) => {
   }
 }
 
-const rollHistory = (state = [], action) => {
+const history = (state = [], action) => {
   switch (action.type) {
     case 'ADD_ROLL':
       return [
@@ -29,4 +29,4 @@ const rollHistory = (state = [], action) => {
   }
 }
 
-export default rollHistory
+export default history
