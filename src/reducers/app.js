@@ -1,10 +1,14 @@
-const app = (state = {
-  theme: 'Basic'
-}, action) => {
+const initialState = {
+  theme: 'Basic',
+  choices: ['Basic', 'Vampire']
+};
+
+const app = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_ROLL':
+    case 'SET_THEME':
       return {
-        ...state
+        ...state,
+        theme: action.theme
       };
     default:
       return state

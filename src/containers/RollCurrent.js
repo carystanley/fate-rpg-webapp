@@ -3,7 +3,7 @@ import { doRoll } from '../actions'
 import RollCurrentComponent from '../components/RollCurrent'
 
 const mapStateToProps = (state) => ({
-  roll: state.rollHistory[state.rollHistory.length-1]
+  roll: state.history[state.history.length-1]
 })
 
 const mapDispatchToProps = ({
@@ -12,7 +12,7 @@ const mapDispatchToProps = ({
 
 const RollCurrent = connect(
   mapStateToProps,
-    mapDispatchToProps
+  mapDispatchToProps
 )(RollCurrentComponent)
 
 export default RollCurrent
