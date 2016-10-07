@@ -7,7 +7,7 @@ const RollCurrent = React.createClass({
     let {shake} = this.state;
     let values = roll && !shake ? roll.values : [0, 0, 0, 0];
     return (
-      <div onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} onMouseLeave={this.handleMouseUp} className="mid-center">
+      <div onMouseDown={this.handlePressStart} onTouchStart={this.handlePressStart} onMouseUp={this.handlePressStop} onMouseLeave={this.handlePressStop} onTouchEnd={this.handlePressStop} className="mid-center">
         <div className="square">
           {values.map(value => <div className="square-pad"><Dice size="size-100" value={value} shake={shake} /></div>)}
         </div>
@@ -15,11 +15,11 @@ const RollCurrent = React.createClass({
     );
   },
 
-  handleMouseDown: function () {
+  handlePressStart: function () {
     this.setState({shake: true});
   },
 
-  handleMouseUp: function () {
+  handlePressStop: function () {
     let {shake} = this.state;
     if (shake) {
       this.setState({shake: false});
