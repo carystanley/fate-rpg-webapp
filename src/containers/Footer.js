@@ -2,13 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { doRoll } from '../actions'
 
-let AddRoll = ({ dispatch }) => {
+let Footer = ({ dispatch }) => {
   return (
-    <div>
+    <div id="footer" className="bgc-footer">
       <button onClick={e => { dispatch(doRoll()); }}>Roll</button>
     </div>
   )
 }
-AddRoll = connect()(AddRoll)
+Footer = connect()(Footer)
 
-export default AddRoll
+export default Footer
