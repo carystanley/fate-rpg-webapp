@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { doRoll } from '../actions'
+import { doRoll, navigate } from '../actions'
 import AppComponent from '../components/App'
 
 const mapStateToProps = (state) => ({
@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = ({
-  onRoll: doRoll
+  onRoll: doRoll,
+  navigate
 })
 
 const App = connect(

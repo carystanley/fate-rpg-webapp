@@ -82,7 +82,7 @@ body {
 }
 
 .Btn {
-  display: block;
+  display: inline-block;
   background-color: black;
   border: solid #999 1px;
   color: #ddd;
