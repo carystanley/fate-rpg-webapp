@@ -1,9 +1,8 @@
-import { connect } from 'react-redux'
 import React, { PropTypes } from 'react'
 
 class Theme extends React.Component {
   static propTypes = {
-    isDark: PropTypes.string
+    theme: PropTypes.string
   }
   static defaultProps = {
     theme: 'Basic'
@@ -25,13 +24,5 @@ class Theme extends React.Component {
     return null;
   }
 }
-
-const mapStateToProps = (state) => ({
-  theme: state.app.theme
-})
-
-Theme = connect(
-  mapStateToProps
-)(Theme)
 
 export default Theme

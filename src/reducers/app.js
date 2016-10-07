@@ -1,4 +1,5 @@
 const initialState = {
+  currentView: 'roll',
   theme: 'Basic',
   choices: ['Basic', 'Vampire']
 };
@@ -9,6 +10,11 @@ const app = (state = initialState, action) => {
       return {
         ...state,
         theme: action.theme
+      };
+    case 'NAVIGATE':
+      return {
+        ...state,
+        currentView: action.view
       };
     default:
       return state

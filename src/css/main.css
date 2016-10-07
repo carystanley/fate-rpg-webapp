@@ -35,6 +35,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding: 10px;
 }
 
 .square-pad {
@@ -78,6 +79,19 @@ body {
 
 .roll-total {
   text-align: center;
+}
+
+.Btn {
+  display: block;
+  background-color: black;
+  border: solid #999 1px;
+  color: #ddd;
+  border-radius: 20px;
+  height: 40px;
+  font-size: 14pt;
+  text-align:center;
+  vertical-align: middle;
+  padding: 0 20px;
 }
 
 .dice {
