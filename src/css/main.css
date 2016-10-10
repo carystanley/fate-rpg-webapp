@@ -31,6 +31,22 @@ body {
   border-radius: 5px;
 }
 
+.choice-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.choice-container li {
+  display: block;
+  font-size: 14pt;
+  padding: 10px 20px;
+}
+
+.choice-container li.selected {
+  font-weight: bold;
+}
+
 #footer {
   position: fixed;
   bottom: 0;

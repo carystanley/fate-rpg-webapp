@@ -4,13 +4,17 @@ import '../css/themes.css';
 import '../css/csshake-hard.css';
 
 import Footer from './Footer'
+
 import RollHistory from './RollHistory'
 import RollCurrent from './RollCurrent'
+import Themes from './Themes'
+
 import Theme from './Theme'
 
 var views = {
   roll: RollCurrent,
-  history: RollHistory
+  history: RollHistory,
+  themes: Themes
 };
 
 const App = (props) => {

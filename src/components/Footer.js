@@ -7,6 +7,7 @@ let Footer = ({ onRoll, navigate, currentView }) => {
       <ul className="navigation">
         <li className={cx({selected: currentView === 'roll'})} onClick={() => { navigate('roll') }}>Current</li>
         <li className={cx({selected: currentView === 'history'})} onClick={() => { navigate('history') }}>History</li>
+        <li className={cx({selected: currentView === 'themes'})} onClick={() => { navigate('themes') }}>Themes</li>
       </ul>
     </div>
   )
