@@ -22,6 +22,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 }
 
 .list-container li {
@@ -152,5 +153,3 @@ body {
 .dice.value-1 .vert { display: none; }
 .dice.value0 .horz { display: none; }
 .dice.value0 .vert { display: none; }
-
-
