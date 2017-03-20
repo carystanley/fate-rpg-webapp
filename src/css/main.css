@@ -36,12 +36,15 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 }
 
 .choice-container li {
   display: block;
   font-size: 14pt;
-  padding: 10px 20px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .choice-container li.selected {
