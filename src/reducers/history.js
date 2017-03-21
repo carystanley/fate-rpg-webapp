@@ -10,7 +10,8 @@ const roll = (state, action) => {
       }
       return {
         values,
-        total
+        total,
+        time: Date.now()
       }
     default:
       return state

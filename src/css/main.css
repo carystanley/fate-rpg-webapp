@@ -30,6 +30,7 @@ body {
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
 }
 
 .choice-container {
@@ -98,6 +99,13 @@ body {
 
 .roll-total {
   text-align: center;
+}
+
+.roll-time {
+  font-size: 9pt;
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
 }
 
 .navigation {
