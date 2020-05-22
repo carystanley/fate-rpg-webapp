@@ -10,7 +10,7 @@ const RollCurrent = React.createClass({
     return (
       <div
         onMouseDown={this.handlePressStart}
-        // onTouchStart={this.handlePressStart}
+        onTouchStart={this.handlePressStart}
         onMouseUp={this.handlePressStop}
         // onMouseLeave={this.handlePressStop}
         // onTouchEnd={this.handlePressStop}
