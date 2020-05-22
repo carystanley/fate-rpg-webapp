@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react'
 import Dice from './Dice'
 
 const RollCurrent = React.createClass({
-    a:0,
   render: function() {
     let {roll} = this.props;
     let {shake} = this.state;
@@ -12,11 +11,10 @@ const RollCurrent = React.createClass({
         onMouseDown={this.handlePressStart}
         onTouchStart={this.handlePressStart}
         onMouseUp={this.handlePressStop}
-        // onMouseLeave={this.handlePressStop}
-        // onTouchEnd={this.handlePressStop}
+        onMouseLeave={this.handlePressStop}
+        onTouchEnd={this.handlePressStop}
         className="mid-center"
       >
-        {this.a}
         <div className="square">
           {values.map(value =>
             <div className="square-pad">
@@ -29,12 +27,11 @@ const RollCurrent = React.createClass({
   },
 
   handlePressStart: function () {
-      this.a++;
     this.setState({shake: true});
   },
 
-  handlePressStop: function () {
-      this.a--;
+  handlePressStop: function (e) {
+    e.preventDefault();
     let { shake } = this.state;
     if (shake) {
       this.setState({ shake: false });
